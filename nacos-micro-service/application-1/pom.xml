@@ -12,6 +12,11 @@
   <artifactId>application-1</artifactId>
   <dependencies>
     <dependency>
+      <groupId>com.itheima.nacos</groupId>
+      <artifactId>service-1-api</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
       <groupId>com.alibaba.cloud</groupId>
       <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
     </dependency>
@@ -22,6 +27,10 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-dubbo</artifactId>
     </dependency>
   </dependencies>
 
