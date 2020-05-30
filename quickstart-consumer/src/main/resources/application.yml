@@ -1,0 +1,12 @@
+server:
+  port: 56020
+
+spring:
+  application:
+    name: quick-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: d98d1272-87b8-41de-bb65-0ea9dcf316c9
+        cluster-name: DEFAULT
