@@ -1,5 +1,7 @@
 package com.itheima.microservice.application1.controller;
 
+import com.itheima.microservice.application1.Config;
+import com.itheima.microservice.application1.Config2;
 import com.itheima.microservice.service1.api.ConsumerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -14,14 +16,18 @@ public class Application1Controller {
 
     @org.apache.dubbo.config.annotation.Reference
     ConsumerService consumerService;
+
     @Autowired
-    private ConfigurableApplicationContext applicationContext;
+    private Config config;
+
+    @Autowired
+    private Config2 config2;
 
     @GetMapping("/service")
     public String service() {
         String service = consumerService.service();
-        String name = applicationContext.getEnvironment().getProperty("common.name");
-        System.out.println(name);
+        System.out.println("config.getUseLocalCache: " + config.getUseLocalCache());
+        System.out.println("config2.getName: " + config2.getName());
         return service;
     }
 }
